@@ -12,7 +12,7 @@ export class RootEffects {
     private actions: Actions,
     private postService: PostService){}
 
-  getMockDataEffect$ = createEffect(
+  getPostDataEffect$ = createEffect(
     () => this.actions.pipe(
       ofType(ApiGetPostData),
       mergeMap((action) => {

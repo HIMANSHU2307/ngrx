@@ -11,5 +11,5 @@ export const initialState: RootState = {
 }
 
 export const rootReducer = createReducer(initialState,
-  on(PostApiSuccess, (state, action) => ({ selectedPostData: action.data, error: null })),
+  on(PostApiSuccess, (state, action) => ({ ...state, selectedPostData: action.data, error: null })),
 )
